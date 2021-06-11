@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  app:
+    build: .
+    command: air
+    volumes:
+      - .:/go/src/app
+    ports:
+      - "3000:3000"
+    tty: true
+    stdin_open: true
